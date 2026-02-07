@@ -160,6 +160,16 @@ th {
 <select id="year"><option>Year</option></select>
 </div>
 
+<h3 style="margin-top:10px;">Enter Marks (0-100) for each subject:</h3>
+
+<label>Bengali</label><input type="number" id="bengaliInput" min="0" max="100">
+<label>English</label><input type="number" id="englishInput" min="0" max="100">
+<label>Mathematics</label><input type="number" id="mathInput" min="0" max="100">
+<label>Physical Science</label><input type="number" id="physInput" min="0" max="100">
+<label>Life Science</label><input type="number" id="lifeInput" min="0" max="100">
+<label>History</label><input type="number" id="historyInput" min="0" max="100">
+<label>Geography</label><input type="number" id="geoInput" min="0" max="100">
+
 <button onclick="showResult()">VIEW RESULT</button>
 
 <div class="result" id="resultBox">
@@ -197,6 +207,7 @@ th {
 <li>Enter your Roll Number correctly.</li>
 <li>Enter Registration / Number as per admit card.</li>
 <li>Select correct Date of Birth (Date, Month, Year).</li>
+<li>Enter marks obtained for each subject (0–100).</li>
 <li>Click VIEW RESULT to see total, percentage, grade and pass/fail.</li>
 <li>This page is for West Bengal Board students.</li>
 </ul>
@@ -238,9 +249,15 @@ function showResult(){
   if(pin!=="2026"){alert("Incorrect PIN! Please enter 2026"); return;}
   if(roll==="" || reg===""){alert("Please fill Roll Number and Registration Number"); return;}
 
-  // Example marks (replace with real input if you want)
+  // Get student input marks
   let marks = {
-    bengali: 65, english:61, math:58, phys:60, life:62, history:55, geo:59
+    bengali: parseInt(document.getElementById("bengaliInput").value) || 0,
+    english: parseInt(document.getElementById("englishInput").value) || 0,
+    math: parseInt(document.getElementById("mathInput").value) || 0,
+    phys: parseInt(document.getElementById("physInput").value) || 0,
+    life: parseInt(document.getElementById("lifeInput").value) || 0,
+    history: parseInt(document.getElementById("historyInput").value) || 0,
+    geo: parseInt(document.getElementById("geoInput").value) || 0
   };
 
   let total=0, fail=false;
@@ -259,15 +276,13 @@ function showResult(){
   document.getElementById("totalMarks").innerText=total+" / 700";
   document.getElementById("percentage").innerText=percentage+"%";
 
-  // Overall grade
   let overallGrade=getGrade(percentage);
   document.getElementById("overallGrade").innerText=overallGrade;
 
-  // Overall pass/fail
   document.getElementById("overallStatus").innerText=(fail || total<175) ? "FAIL" : "PASS";
   document.getElementById("resultBox").style.display="block";
 }
 </script>
 
 </body>
-</html>
+                                                                         </html>
