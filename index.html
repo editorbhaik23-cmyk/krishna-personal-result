@@ -1,171 +1,267 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Krishna Personal MP Result Check</title>
+<meta charset="UTF-8">
+<title>KRISHNA PERSONAL MP RESULTS CHECK 2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: #222;
+}
 
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: linear-gradient(to right, #667eea, #764ba2);
-    }
+.wrapper {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
 
-    .container {
-      max-width: 420px;
-      margin: 30px auto;
-      background: #ffffff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    }
+.card {
+  flex: 1;
+  min-width: 300px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
 
-    h1 {
-      text-align: center;
-      font-size: 22px;
-      color: #333;
-      margin-bottom: 5px;
-    }
+h1 {
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
 
-    .subtitle {
-      text-align: center;
-      font-size: 13px;
-      color: #555;
-      margin-bottom: 20px;
-    }
+.subtitle {
+  text-align: center;
+  font-size: 13px;
+  margin-bottom: 15px;
+  color: #444;
+}
 
-    label {
-      font-size: 14px;
-      font-weight: 600;
-      color: #333;
-      display: block;
-      margin-top: 12px;
-    }
+label {
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 10px;
+  display: block;
+}
 
-    input, select {
-      width: 100%;
-      padding: 8px;
-      margin-top: 5px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      font-size: 14px;
-    }
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
 
-    .dob {
-      display: flex;
-      gap: 6px;
-    }
+.dob {
+  display: flex;
+  gap: 6px;
+}
 
-    .dob select {
-      width: 33%;
-    }
+.dob select {
+  width: 33%;
+}
 
-    button {
-      width: 100%;
-      margin-top: 18px;
-      padding: 10px;
-      background: #667eea;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
-    }
+button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  background: #141e30;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
 
-    button:hover {
-      background: #5563d6;
-    }
+button:hover {
+  background: #0f1725;
+}
 
-    .result {
-      display: none;
-      margin-top: 20px;
-      padding: 12px;
-      background: #f1f5ff;
-      border-radius: 6px;
-      text-align: center;
-      font-size: 14px;
-      color: #333;
-    }
+.result {
+  display: none;
+  margin-top: 20px;
+}
 
-    .note {
-      text-align: center;
-      font-size: 12px;
-      color: #444;
-      margin-top: 15px;
-    }
-  </style>
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background: #f1f1f1;
+}
+
+.pass {
+  color: green;
+  font-weight: bold;
+}
+
+.fail {
+  color: red;
+  font-weight: bold;
+}
+
+.footer {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 20px;
+  color: #222;
+  font-weight: bold;
+}
+
+.instruction ul {
+  font-size: 14px;
+  line-height: 1.7;
+  padding-left: 18px;
+}
+</style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="wrapper">
 
-  <h1>Krishna Personal MP Result Check</h1>
-  <div class="subtitle">
-    West Bengal Board – Dhanyashree Centre
-  </div>
+<!-- RESULT CARD -->
+<div class="card">
+<h1>KRISHNA PERSONAL MP RESULTS CHECK 2026</h1>
+<div class="subtitle">West Bengal Board – Dhanyashree Centre</div>
 
-  <label>Roll Number</label>
-  <input type="text" id="roll" placeholder="Enter Roll Number">
+<label>Enter 4-Digit PIN</label>
+<input type="password" id="pin" placeholder="Enter PIN">
 
-  <label>Date of Birth</label>
-  <div class="dob">
-    <select id="day">
-      <option>Date</option>
-      <!-- 1 to 31 -->
-      <script>
-        for(let i=1;i<=31;i++){
-          document.write(`<option>${i}</option>`);
-        }
-      </script>
-    </select>
+<label>Roll Number</label>
+<input type="text" id="roll">
 
-    <select id="month">
-      <option>Month</option>
-      <option>Jan</option><option>Feb</option><option>Mar</option>
-      <option>Apr</option><option>May</option><option>Jun</option>
-      <option>Jul</option><option>Aug</option><option>Sep</option>
-      <option>Oct</option><option>Nov</option><option>Dec</option>
-    </select>
+<label>Registration Number</label>
+<input type="text" id="reg">
 
-    <select id="year">
-      <option>Year</option>
-      <script>
-        for(let y=2010;y>=1990;y--){
-          document.write(`<option>${y}</option>`);
-        }
-      </script>
-    </select>
-  </div>
+<label>Date of Birth</label>
+<div class="dob">
+<select id="day"><option>Date</option></select>
+<select id="month"><option>Month</option></select>
+<select id="year"><option>Year</option></select>
+</div>
 
-  <button onclick="showResult()">View Result</button>
+<button onclick="showResult()">VIEW RESULT</button>
 
-  <div class="result" id="resultBox">
-    ✅ <b>Result Found</b><br><br>
-    Bengali, English, Mathematics, Physical Science,<br>
-    Life Science, History, Geography<br><br>
-    <b>Status:</b> PASS
-  </div>
+<div class="result" id="resultBox">
+<table id="resultTable">
+<tr><th>Subject</th><th>Marks</th><th>Grade</th><th>Status</th></tr>
+<tr><td>Bengali</td><td id="bengali">0</td><td id="bengaliGrade">-</td><td id="bengaliStatus">-</td></tr>
+<tr><td>English</td><td id="english">0</td><td id="englishGrade">-</td><td id="englishStatus">-</td></tr>
+<tr><td>Mathematics</td><td id="math">0</td><td id="mathGrade">-</td><td id="mathStatus">-</td></tr>
+<tr><td>Physical Science</td><td id="phys">0</td><td id="physGrade">-</td><td id="physStatus">-</td></tr>
+<tr><td>Life Science</td><td id="life">0</td><td id="lifeGrade">-</td><td id="lifeStatus">-</td></tr>
+<tr><td>History</td><td id="history">0</td><td id="historyGrade">-</td><td id="historyStatus">-</td></tr>
+<tr><td>Geography</td><td id="geo">0</td><td id="geoGrade">-</td><td id="geoStatus">-</td></tr>
+<tr><th>Total</th><th id="totalMarks">0 / 700</th><th colspan="2" id="overallGrade">-</th></tr>
+<tr><th>Percentage</th><th colspan="3" id="percentage">0%</th></tr>
+<tr><th>Overall Status</th><th colspan="3" id="overallStatus">-</th></tr>
+</table>
 
-  <div class="note">
-    Note: Online link private রাখা হয়েছে।
-  </div>
+<div class="footer">SPECIAL THANK YOU – KRISHNA</div>
+<button onclick="window.print()">PRINT / SAVE PDF</button>
+</div>
+</div>
+
+<!-- RIGHT: INSTRUCTIONS -->
+<div class="card instruction">
+<h2>HOW TO FILL-UP</h2>
+<ul>
+<li>Enter the 4-digit PIN (2026).</li>
+<li>Enter your Roll Number correctly.</li>
+<li>Enter Registration / Number as per admit card.</li>
+<li>Select correct Date of Birth (Date, Month, Year).</li>
+<li>Enter marks obtained for each subject (0–100).</li>
+<li>Click VIEW RESULT to see total, percentage, grade and pass/fail.</li>
+<li>This page is only for Dhanyashree Centre students.</li>
+</ul>
+</div>
 
 </div>
 
 <script>
-  function showResult() {
-    var roll = document.getElementById("roll").value;
-    if (roll === "") {
-      alert("Please enter Roll Number");
-    } else {
-      document.getElementById("resultBox").style.display = "block";
-    }
+// Fill day, month, year dropdowns
+let daySelect = document.getElementById("day");
+for(let i=1;i<=31;i++){let opt=document.createElement("option"); opt.value=i; opt.text=i; daySelect.add(opt);}
+let monthSelect = document.getElementById("month");
+["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"].forEach(m=>{let opt=document.createElement("option"); opt.value=m; opt.text=m; monthSelect.add(opt);});
+let yearSelect=document.getElementById("year");
+for(let y=2010;y>=1990;y--){let opt=document.createElement("option"); opt.value=y; opt.text=y; yearSelect.add(opt);}
+
+// Grade calculation function
+function getGrade(mark){
+  if(mark>=91) return "A+";
+  else if(mark>=81) return "A";
+  else if(mark>=71) return "B+";
+  else if(mark>=61) return "B";
+  else if(mark>=51) return "C";
+  else if(mark>=35) return "D";
+  else return "F";
+}
+
+// Pass/Fail per subject
+function getStatus(mark){
+  return (mark>=25) ? "PASS" : "FAIL";
+}
+
+// Show Result function
+function showResult(){
+  let pin = document.getElementById("pin").value;
+  let roll = document.getElementById("roll").value;
+  let reg = document.getElementById("reg").value;
+
+  if(pin!=="2026"){alert("Incorrect PIN! Please enter 2026"); return;}
+  if(roll==="" || reg===""){alert("Please fill Roll Number and Registration Number"); return;}
+
+  // Example marks (replace with real input if you want)
+  let marks = {
+    bengali: 65, english:61, math:58, phys:60, life:62, history:55, geo:59
+  };
+
+  let total=0, fail=false;
+
+  for(let subj in marks){
+    let mark = marks[subj];
+    total+=mark;
+    document.getElementById(subj).innerText=mark;
+    document.getElementById(subj+"Grade").innerText=getGrade(mark);
+    let status=getStatus(mark);
+    document.getElementById(subj+"Status").innerText=status;
+    if(status==="FAIL") fail=true;
   }
+
+  let percentage=(total/700*100).toFixed(2);
+  document.getElementById("totalMarks").innerText=total+" / 700";
+  document.getElementById("percentage").innerText=percentage+"%";
+
+  // Overall grade
+  let overallGrade=getGrade(percentage);
+  document.getElementById("overallGrade").innerText=overallGrade;
+
+  // Overall pass/fail
+  document.getElementById("overallStatus").innerText=(fail || total<175) ? "FAIL" : "PASS";
+  document.getElementById("resultBox").style.display="block";
+}
 </script>
 
 </body>
-    </html>
+</html>
